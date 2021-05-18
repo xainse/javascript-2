@@ -45,7 +45,7 @@
 // }
 
 $.ajax({
-  url: 'file:///C:\Users\Legion\Desktop\По заданию.csv',
+  url: 'По заданию.csv',
   dataType: 'text',
 }).done(successFunction);
 
