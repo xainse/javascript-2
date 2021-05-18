@@ -20,26 +20,36 @@
 15,30,Львов,200000
 10,20,Одесса,200000
 10,20,Киев,200000 */
-function parse() {
-  let textarea = document.querySelector('textarea');
-  let myList = textarea.value.split('\n');
-  console.log(myList);
+// function parse() {
+//   let textarea = document.querySelector('textarea');
+//   let myList = textarea.value.split('\n');
+//   console.log(myList);
 
-  let newArray = myList.map((item, i) => {
-    console.log(item);
-    let arr = item.split(',');
-    let arr2 = [];
-    arr.map((item_2, index) => {
-      let s = [];
-      if (index == 0) { s['x'] = item_2 }
-      if (index == 1) { s['y'] = item_2 }
-      if (index == 2) { s['city'] = item_2 }
-      if (index == 3) { s['popul'] = item_2 }
-      arr2.push(s);
-    })
-    return arr2;
-  });
+//   let newArray = myList.map((item) => {
+//     console.log(item);
+//     let arr = item.split(',');
+//     let arr2 = [];
+//     arr.map((item_2, index) => {
+//       let s = [];
+//       if (index == 0) { s['x'] = item_2 }
+//       if (index == 1) { s['y'] = item_2 }
+//       if (index == 2) { s['city'] = item_2 }
+//       if (index == 3) { s['popul'] = item_2 }
+//       arr2.push(s);
+//     })
+//     return arr2;
+//   });
 
-  console.log(newArray);
-  newArray = newArray.map(item);
+//   // console.log(newArray);
+//   newArray = newArray.map(item);
+// }
+
+$.ajax({
+  url: 'file:///C:\Users\Legion\Desktop\По заданию.csv',
+  dataType: 'text',
+}).done(successFunction);
+
+function successFunction(data) {
+  var allRows = data.split(/\r?\n|\r/);
+  console.log(allRows);
 }
