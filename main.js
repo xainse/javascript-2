@@ -45,7 +45,7 @@
 // }
 
 $.ajax({
-  url: 'По заданию.csv',
+  url: 'what.csv',
   dataType: 'text',
 }).done(successFunction);
 
@@ -53,3 +53,9 @@ function successFunction(data) {
   var allRows = data.split(/\r?\n|\r/);
   console.log(allRows);
 }
+// getData();
+// async function getData() {
+//   const response = await fetch('what.csv');
+//   const data = await response.text();
+//   console.log(data);
+// }
