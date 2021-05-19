@@ -20,6 +20,13 @@
 15,30,Львов,200000
 10,20,Одесса,200000
 10,20,Киев,200000 */
+
+let csvFileText = "10,20,Кропивницкий,200000 \n" + 
++ "15,30,Львов,200000 \n"
++ "10,20,Одесса,200000 \n"
++ "10,20,Киев,200000";
+
+
 // function parse() {
 //   let textarea = document.querySelector('textarea');
 //   let myList = textarea.value.split('\n');
